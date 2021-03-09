@@ -8,14 +8,29 @@
 import SwiftUI
 
 struct ContentView: View {
-    var body: some View {
-        Text("Hello, world!")
+  @ObservedObject var gameVM = GameViewModel()
+  
+  var body: some View {
+    VStack {
+      Text("score: \(gameVM.score)")
+        .padding()
+      
+      Text("\(gameVM.currentQuestion)")
+      
+      ForEach(gameVM.allOfTheAnswers, id: \.self) { answer in
+        Button(action: {
+          gameVM.playerGuesses(answer: answer)
+        }, label: {
+          Text("\(answer)")
             .padding()
+        })
+      }
     }
+  }
 }
 
 struct ContentView_Previews: PreviewProvider {
-    static var previews: some View {
-        ContentView()
-    }
+  static var previews: some View {
+    ContentView()
+  }
 }

@@ -1,0 +1,61 @@
+[
+  {
+    "id": 1,
+    "question": "The first game in the Mario & Sonic at the Olympic Games series was released to coincide with the Olympic Games of which year?",
+    "answers" : [ "2004", "2008", "2012", "2016"],
+    "correct_answer": "2008"
+  },
+  {
+    "id": 2,
+    "question": "What was the name of the digital chatroom that could be used to send messages on the Nintendo DS?",
+    "answers" : [ "TouchChat", "ImageChat", "Quick Chat", "PictoChat"],
+    "correct_answer": "PictoChat"
+  },
+  {
+    "id": 3,
+    "question": "What is the name of the futuristic racing series produced by Nintendo featuring characters such as Captain Falcon and Black Shadow?",
+    "answers" : [ "Wipeout", "F-Zero", "Mario Kart", "MySims Racing"],
+    "correct_answer": "F-Zero"
+  },
+  {
+    "id": 4,
+    "question": "Which customisable avatars, first introduced on the Nintendo Wii, are playable in games such as Wii Sports, Wii Play, and Wii Party?",
+    "answers" : [ "Uss", "Yuu", "Mii", "Theyy"],
+    "correct_answer": "Mii"
+  },
+  {
+    "id": 5,
+    "question": "Which item in the Mariuo Kart series acts as a homing missle that targets the race leader?",
+    "answers" : [ "Green Shell", "Red Shell", "Spiny Shell", "Pink Shell"],
+    "correct_answer": "Spiny Shell"
+  },
+  {
+    "id": 6,
+    "question": "What wind instrument partially titles a video game in the Legend Of Zelda series?",
+    "answers" : [ "Flute", "Piccolo", "Ocarina", "Bassoon"],
+    "correct_answer": "Ocarina"
+  },
+  {
+    "id": 7,
+    "question": "The Lylat system is the orimary sett8ing for which video game series?",
+    "answers" : [ "Ratchet & Clank", "StarFox", "StarCraft", "Dead Space"],
+    "correct_answer": "StarFox"
+  },
+  {
+    "id": 8,
+    "question": "Which colourful plant-like creatures are the namesake of a Nintendo series that started in 2001?",
+    "answers" : [ "Pikmin", "Triffids", "Pokemon", "Minish"],
+    "correct_answer": "Pikmin"
+  },
+  {
+    "id": 9,
+    "question": "First released in 1972, which Atari video game was created by Allan Alcorn as a training exercise",
+    "answers" : [ "Pong", "Donkey Kong", "Galaxian", "Dig Dug"],
+    "correct_answer": "Pong"
+  },{
+    "id": 10,
+    "question": "The BFG is a weapon that appears in which video game series?",
+    "answers" : [ "Duke Nukem", "Deus Ex", "Devil May Cry", "Doom"],
+    "correct_answer": "Doom"
+  },
+]

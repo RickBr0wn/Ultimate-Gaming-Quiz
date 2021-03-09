@@ -9,9 +9,9 @@ import SwiftUI
 
 @main
 struct Ultimate_Gaming_QuizApp: App {
-    var body: some Scene {
-        WindowGroup {
-            ContentView()
-        }
+  var body: some Scene {
+    WindowGroup {
+      ContentView()
     }
+  }
 }
