@@ -9,9 +9,12 @@ import SwiftUI
 
 @main
 struct Ultimate_Gaming_QuizApp: App {
+  var gameState = GameState.shared
+  
   var body: some Scene {
     WindowGroup {
       ContentView()
+        .environmentObject(gameState)
     }
   }
 }

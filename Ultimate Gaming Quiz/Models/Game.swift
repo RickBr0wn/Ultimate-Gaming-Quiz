@@ -12,64 +12,51 @@ struct GameModel {
   
   var score: Int = 0
   
-  var currentGameState: CurrentGameState = .title
+  var gameState = GameState()
   
   var currentQuestionIndex: Int = 0
   
   var numberOfQuestionsToBeAsked: Int = 5
   
+  var isGameOver: Bool = false
+  
   init() {
-    allOfTheQuestions = Bundle.main.decode("questions")
-    allOfTheQuestions = allOfTheQuestions.shuffled()
+    allOfTheQuestions = Bundle.main.decode("questions").shuffled()
   }
   
   mutating func incrementTheScore() {
-    score += 1
+    self.score += 1
   }
   
   mutating func incrementTheQuestionIndex() {
-    currentQuestionIndex += 1
+    self.currentQuestionIndex += 1
   }
   
   mutating func resetScore() {
-    score = 0
+    self.score = 0
   }
   
   mutating func resetTheQuestionIndex() {
-    currentQuestionIndex = 0
+    self.currentQuestionIndex = 0
   }
   
-  mutating func startGame() -> Void {
-    print("start game")
-    currentGameState = .game
-  }
+  mutating func startGame() -> Void {}
   
   mutating func gameOver() {
-    print("game over")
-    currentGameState = .gameOver
+    self.isGameOver = true
   }
   
   mutating func playerGuesses(answer: String) {
     if answer == self.allOfTheQuestions[self.currentQuestionIndex].correctAnswer {
-      incrementTheScore()
-      if currentQuestionIndex <= numberOfQuestionsToBeAsked {
-        incrementTheQuestionIndex()
-      } else {
-        currentGameState = .gameOver
-        print("game over")
-      }
+      self.incrementTheScore()
     } else {
-      if currentQuestionIndex <= numberOfQuestionsToBeAsked {
-        incrementTheQuestionIndex()
-      } else {
-        currentGameState = .gameOver
-        print("game over")
-      }
+      // Implement a correct/incorrect system
     }
+    self.incrementTheQuestionIndex()
   }
   
 }
 
 enum CurrentGameState {
-  case title, instructions, game, gameOver
+  case title, instructions, settings, game, gameOver
 }
