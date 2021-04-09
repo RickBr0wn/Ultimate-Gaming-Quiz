@@ -11,7 +11,6 @@
 		1111F5CE25FA738D005BF5AF /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1111F5CD25FA738D005BF5AF /* Constants.swift */; };
 		1125AE8B260FEBFC001ECCFB /* Color+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1125AE8A260FEBFC001ECCFB /* Color+Extension.swift */; };
 		114EFCD525D9359000A3AA1D /* Question.swift in Sources */ = {isa = PBXBuildFile; fileRef = 114EFCD425D9358F00A3AA1D /* Question.swift */; };
-		1158737525FA5EA200F6CA87 /* NavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1158737425FA5EA200F6CA87 /* NavigationController.swift */; };
 		1158737825FA605700F6CA87 /* HeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1158737725FA605700F6CA87 /* HeaderView.swift */; };
 		117428B025D9BB3C0053131D /* CodableBundleExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 117428AF25D9BB3C0053131D /* CodableBundleExtension.swift */; };
 		1183AE4325D830F80092A299 /* Ultimate_Gaming_QuizApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1183AE4225D830F80092A299 /* Ultimate_Gaming_QuizApp.swift */; };
@@ -27,6 +26,7 @@
 		118C2DDB25F838870046A232 /* GameOverView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 118C2DDA25F838870046A232 /* GameOverView.swift */; };
 		118C2DDE25F83A610046A232 /* TitleViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 118C2DDD25F83A610046A232 /* TitleViewModel.swift */; };
 		118C2DE125F83D6B0046A232 /* GameState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 118C2DE025F83D6B0046A232 /* GameState.swift */; };
+		11B5F1FB2620F8C90009B5CE /* NavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11B5F1FA2620F8C90009B5CE /* NavigationController.swift */; };
 		11BABEB92616026200488198 /* bubble_rainbow.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 118AD4B725FA697700A5DD48 /* bubble_rainbow.ttf */; };
 		11EC417325D9BE5900C8036A /* questions.json in Resources */ = {isa = PBXBuildFile; fileRef = 11EC417225D9BE5900C8036A /* questions.json */; };
 		11EE1B3625E2A0A200DC93BD /* GameViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11EE1B3525E2A0A200DC93BD /* GameViewModel.swift */; };
@@ -38,7 +38,6 @@
 		1111F5CD25FA738D005BF5AF /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		1125AE8A260FEBFC001ECCFB /* Color+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Color+Extension.swift"; sourceTree = "<group>"; };
 		114EFCD425D9358F00A3AA1D /* Question.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Question.swift; sourceTree = "<group>"; };
-		1158737425FA5EA200F6CA87 /* NavigationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = NavigationController.swift; path = ../../../../Music/NavigationController.swift; sourceTree = "<group>"; };
 		1158737725FA605700F6CA87 /* HeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeaderView.swift; sourceTree = "<group>"; };
 		117428AF25D9BB3C0053131D /* CodableBundleExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CodableBundleExtension.swift; sourceTree = "<group>"; };
 		1183AE3F25D830F80092A299 /* Ultimate Gaming Quiz.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Ultimate Gaming Quiz.app"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -57,6 +56,7 @@
 		118C2DDA25F838870046A232 /* GameOverView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameOverView.swift; sourceTree = "<group>"; };
 		118C2DDD25F83A610046A232 /* TitleViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TitleViewModel.swift; sourceTree = "<group>"; };
 		118C2DE025F83D6B0046A232 /* GameState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameState.swift; sourceTree = "<group>"; };
+		11B5F1FA2620F8C90009B5CE /* NavigationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationController.swift; sourceTree = "<group>"; };
 		11BABEBB261603B800488198 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		11EC417225D9BE5900C8036A /* questions.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = questions.json; sourceTree = "<group>"; };
 		11EE1B3525E2A0A200DC93BD /* GameViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameViewModel.swift; sourceTree = "<group>"; };
@@ -165,6 +165,7 @@
 				118C2DD425F837F80046A232 /* TitleView.swift */,
 				118C2DD725F8386B0046A232 /* InstructionsView.swift */,
 				118C2DDA25F838870046A232 /* GameOverView.swift */,
+				11B5F1FA2620F8C90009B5CE /* NavigationController.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -174,7 +175,6 @@
 			children = (
 				11EE1B3525E2A0A200DC93BD /* GameViewModel.swift */,
 				118C2DDD25F83A610046A232 /* TitleViewModel.swift */,
-				1158737425FA5EA200F6CA87 /* NavigationController.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -258,11 +258,11 @@
 				110104052615E4B000A142F5 /* SettingsView.swift in Sources */,
 				1183AE4525D830F80092A299 /* ContentView.swift in Sources */,
 				114EFCD525D9359000A3AA1D /* Question.swift in Sources */,
+				11B5F1FB2620F8C90009B5CE /* NavigationController.swift in Sources */,
 				118BB02B25FA79B8003FE438 /* AnswersListView.swift in Sources */,
 				118C2DE125F83D6B0046A232 /* GameState.swift in Sources */,
 				1125AE8B260FEBFC001ECCFB /* Color+Extension.swift in Sources */,
 				118C2DD225F836D30046A232 /* GameView.swift in Sources */,
-				1158737525FA5EA200F6CA87 /* NavigationController.swift in Sources */,
 				1183AE4325D830F80092A299 /* Ultimate_Gaming_QuizApp.swift in Sources */,
 				11EE1B3625E2A0A200DC93BD /* GameViewModel.swift in Sources */,
 				117428B025D9BB3C0053131D /* CodableBundleExtension.swift in Sources */,

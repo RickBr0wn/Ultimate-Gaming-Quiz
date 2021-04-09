@@ -57,6 +57,3 @@ struct GameModel {
   
 }
 
-enum CurrentGameState {
-  case title, instructions, settings, game, gameOver
-}
