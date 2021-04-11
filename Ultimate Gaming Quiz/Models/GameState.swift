@@ -11,4 +11,5 @@ class GameState: ObservableObject {
   static let shared = GameState()
   
   @Published var currentGameState: CurrentGameState = .title
+
 }
