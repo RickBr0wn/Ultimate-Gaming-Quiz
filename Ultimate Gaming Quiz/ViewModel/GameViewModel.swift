@@ -10,6 +10,8 @@ import SwiftUI
 class GameViewModel: ObservableObject {
   @Published var gameModel = GameModel()
   
+  var numberOfQuestions = Settings.shared.numberOfQuestions
+  
   var score: Int {
     gameModel.score
   }
@@ -35,7 +37,7 @@ class GameViewModel: ObservableObject {
   }
   
   func playerGuesses(answer: String) -> Void {
-    gameModel.playerGuesses(answer: answer)
+    gameModel.playerGuesses(answer: answer, numberOfQuestions: numberOfQuestions)
   }
   
   

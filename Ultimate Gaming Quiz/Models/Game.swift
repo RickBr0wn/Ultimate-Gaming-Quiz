@@ -12,11 +12,9 @@ struct GameModel {
   
   var score: Int = 0
   
-  var gameState = GameState()
+  var gameState = GameState.shared
   
   var currentQuestionIndex: Int = 0
-  
-  var numberOfQuestionsToBeAsked: Int = 5
   
   var isGameOver: Bool = false
   
@@ -46,11 +44,15 @@ struct GameModel {
     self.isGameOver = true
   }
   
-  mutating func playerGuesses(answer: String) {
+  mutating func playerGuesses(answer: String, numberOfQuestions: Int) {
     if answer == self.allOfTheQuestions[self.currentQuestionIndex].correctAnswer {
       self.incrementTheScore()
     } else {
       // Implement a correct/incorrect system
+    }
+    if numberOfQuestions == self.currentQuestionIndex + 1 {
+      gameOver()
+      gameState.currentGameState = .gameOver
     }
     self.incrementTheQuestionIndex()
   }

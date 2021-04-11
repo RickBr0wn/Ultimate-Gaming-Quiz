@@ -25,7 +25,7 @@ struct NavigationController: View {
     case .game:
       return AnyView(GameView())
     case .gameOver:
-      return AnyView(GameView())
+      return AnyView(GameOverView())
     }
   }
 }
