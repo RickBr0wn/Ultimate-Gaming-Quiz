@@ -9,7 +9,7 @@ import SwiftUI
 
 struct AnswerView: View {
   let answer: String
-  let fontName = Constants.fontName.rawValue
+  let fontName = Constants.primaryFont.rawValue
   
   var body: some View {
     ZStack {

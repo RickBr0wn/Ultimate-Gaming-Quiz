@@ -11,7 +11,7 @@ struct AnswersListView: View {
   @ObservedObject var gameVM = GameViewModel()
   
   let arrayOfAnswers: [String]
-  let fontName = Constants.fontName.rawValue
+  let fontName = Constants.primaryFont.rawValue
   
   var body: some View {
     VStack {

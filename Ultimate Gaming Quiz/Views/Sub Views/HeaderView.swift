@@ -10,7 +10,7 @@ import SwiftUI
 struct HeaderView: View {
   let score: Int
   let questionNumber: Int
-  let fontName = Constants.fontName.rawValue
+  let fontName = Constants.primaryFont.rawValue
   let numberOfQuestions = Settings.shared.numberOfQuestions
   
   var body: some View {

@@ -4,6 +4,7 @@
 <dict>
 	<key>UIAppFonts</key>
 	<array>
+		<string>stupendous_jack.ttf</string>
 		<string>bubble_rainbow.ttf</string>
 	</array>
 	<key>CFBundleDevelopmentRegion</key>

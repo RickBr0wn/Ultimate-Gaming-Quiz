@@ -8,5 +8,6 @@
 import Foundation
 
 enum Constants: String {
-  case fontName = "Bubble Rainbow"
+  case primaryFont = "Stupendous Jack"
+  case secondaryFont = "Bubble Rainbow"
 }

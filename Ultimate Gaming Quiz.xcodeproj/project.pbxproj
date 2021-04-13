@@ -26,6 +26,7 @@
 		118C2DDB25F838870046A232 /* GameOverView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 118C2DDA25F838870046A232 /* GameOverView.swift */; };
 		118C2DDE25F83A610046A232 /* TitleViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 118C2DDD25F83A610046A232 /* TitleViewModel.swift */; };
 		118C2DE125F83D6B0046A232 /* GameState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 118C2DE025F83D6B0046A232 /* GameState.swift */; };
+		11A9AFD32625F06400537775 /* stupendous_jack.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 11A9AFD22625F06400537775 /* stupendous_jack.ttf */; };
 		11B5F1FB2620F8C90009B5CE /* NavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11B5F1FA2620F8C90009B5CE /* NavigationController.swift */; };
 		11B82FD2262359C200892C78 /* Settings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11B82FD1262359C200892C78 /* Settings.swift */; };
 		11BABEB92616026200488198 /* bubble_rainbow.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 118AD4B725FA697700A5DD48 /* bubble_rainbow.ttf */; };
@@ -57,6 +58,7 @@
 		118C2DDA25F838870046A232 /* GameOverView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameOverView.swift; sourceTree = "<group>"; };
 		118C2DDD25F83A610046A232 /* TitleViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TitleViewModel.swift; sourceTree = "<group>"; };
 		118C2DE025F83D6B0046A232 /* GameState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameState.swift; sourceTree = "<group>"; };
+		11A9AFD22625F06400537775 /* stupendous_jack.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = stupendous_jack.ttf; sourceTree = "<group>"; };
 		11B5F1FA2620F8C90009B5CE /* NavigationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationController.swift; sourceTree = "<group>"; };
 		11B82FD1262359C200892C78 /* Settings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Settings.swift; sourceTree = "<group>"; };
 		11BABEBB261603B800488198 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
@@ -133,6 +135,7 @@
 				117428AE25D9BB080053131D /* Extension */,
 				114EFCD325D9358600A3AA1D /* Models */,
 				1183AE4225D830F80092A299 /* Ultimate_Gaming_QuizApp.swift */,
+				11A9AFD22625F06400537775 /* stupendous_jack.ttf */,
 				118AD4B725FA697700A5DD48 /* bubble_rainbow.ttf */,
 				1183AE4425D830F80092A299 /* ContentView.swift */,
 				1183AE4625D830F80092A299 /* Assets.xcassets */,
@@ -242,6 +245,7 @@
 				11EC417325D9BE5900C8036A /* questions.json in Resources */,
 				1183AE4A25D830F80092A299 /* Preview Assets.xcassets in Resources */,
 				1183AE4725D830F80092A299 /* Assets.xcassets in Resources */,
+				11A9AFD32625F06400537775 /* stupendous_jack.ttf in Resources */,
 				11BABEB92616026200488198 /* bubble_rainbow.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
