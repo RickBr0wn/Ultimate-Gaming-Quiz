@@ -39,7 +39,7 @@ class GameViewModel: ObservableObject {
   }
 
   func playerGuesses(answer: String) -> Void {
-    gameModel.playerGuesses(answer: answer, numberOfQuestions: numberOfQuestions)
+    gameModel.playerGuesses(answer: answer, numberOfQuestions: numberOfQuestions.rawValue)
   }
   
   func gameOver() -> Void {

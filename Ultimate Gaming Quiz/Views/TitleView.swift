@@ -32,12 +32,13 @@ struct TitleView: View {
               .frame(width: 40, height: 40, alignment: .leading)
           }
         }
-        .offset(x: 0, y: -74)
+        
+        Spacer()
         
         Image("title_image")
           .resizable()
           .aspectRatio(contentMode: .fit)
-          .offset(x: 0, y: -20)
+
         
         Button(action: {
           gameVM.startGame()
@@ -48,8 +49,10 @@ struct TitleView: View {
             .aspectRatio(contentMode: .fit)
         }
         
+        Spacer()
       }
-      .padding()
+      .padding(.vertical, 50)
+      .padding(.horizontal, 20)
   }
 }
 

@@ -11,6 +11,9 @@ struct SettingsView: View {
   @EnvironmentObject var gameStateVM: GameState
   @ObservedObject var settings = Settings.shared
   
+  let font = Constants.primaryFont.rawValue
+  let size: CGFloat = 40
+  
   var body: some View {
     VStack {
       HStack {
@@ -32,90 +35,119 @@ struct SettingsView: View {
             .frame(width: 40, height: 40, alignment: .leading)
         }
       }
-//      .offset(x: 0, y: -74)
       
       Spacer()
       
       Image("settings_image")
         .resizable()
-        .aspectRatio(contentMode: .fit)
-//        .offset(x: 0, y: -20)
+        .scaledToFit()
+        .padding(.bottom, 40)
+        .offset(x: 0, y: -50)
       
-      VStack(alignment: .center, spacing: 10, content: {
-        Image("settings_question")
-          .resizable()
-          .frame(width: 350, height: 50, alignment: .center)
-        
-        HStack {
-          Button(action: {
-            self.settings.soundEffects.toggle()
-          }, label: {
-            Image("menu_backward")
-              .resizable()
-              .frame(width: 40, height: 40, alignment: .leading)
-          })
+      VStack {
+        VStack {
+          StrokeText(text: "Number of Questions", width: 3, color: .black)
+            .foregroundColor(.white)
+            .font(.custom(font, size: 36))
           
-          if self.settings.soundEffects {
-            Image("menu_on")
-              .resizable()
-              .frame(width: 60, height: 60, alignment: .center)
-          } else {
-            Image("menu_off")
-              .resizable()
-              .frame(width: 60, height: 60, alignment: .center)
+          HStack {
+            Button(action: {}) {
+              Image("menu_backward")
+                .resizable()
+                .frame(width: size, height: size, alignment: .center)
+            }
+            
+            Spacer()
+            
+            StrokeText(text: String(settings.numberOfQuestions.rawValue), width: 3, color: .black)
+              .foregroundColor(.white)
+              .font(.custom(font, size: 42))
+            
+            Spacer()
+            
+            Button(action: {}) {
+              Image("menu_forward")
+                .resizable()
+                .frame(width: size, height: size, alignment: .center)
+            }
           }
+          .frame(width: 200)
+        }
+        // Background Music
+        VStack {
+          StrokeText(text: "Background Music", width: 3, color: .black)
+            .foregroundColor(.white)
+            .font(.custom(font, size: 36))
           
-          Button(action: {
-            self.settings.soundEffects.toggle()
-          }, label: {
-            Image("menu_forward")
+          HStack {
+            Button(action: {
+              settings.backgroundMusic.toggle()
+            }) {
+              Image("menu_backward")
+                .resizable()
+                .frame(width: size, height: size, alignment: .center)
+            }
+            
+            Spacer()
+            
+            Image(settings.backgroundMusic ? "menu_on" : "menu_off")
               .resizable()
-              .frame(width: 40, height: 40, alignment: .leading)
-          })
-          
+              .frame(width: size + 20, height: size, alignment: .center)
+              .padding(.horizontal, 20)
+            
+            Spacer()
+            
+            Button(action: {
+              settings.backgroundMusic.toggle()
+            }) {
+              Image("menu_forward")
+                .resizable()
+                .frame(width: size, height: size, alignment: .center)
+            }
+          }
+          .frame(width: 200)
         }
-        
-        Image("settings_fx")
-          .resizable()
-          .frame(width: 350, height: 50, alignment: .center)
-        
-        HStack {
-          Image("menu_backward")
-            .resizable()
-            .frame(width: 40, height: 40, alignment: .leading)
+        // Sound Effects
+        VStack {
+          StrokeText(text: "Sound Effects", width: 3, color: .black)
+            .foregroundColor(.white)
+            .font(.custom(font, size: 36))
           
-          Image("menu_on")
-            .resizable()
-            .frame(width: 60, height: 60, alignment: .center)
-          
-          Image("menu_forward")
-            .resizable()
-            .frame(width: 40, height: 40, alignment: .leading)
-          
+          HStack {
+            Button(action: {
+              settings.soundEffects.toggle()
+            }) {
+              Image("menu_backward")
+                .resizable()
+                .frame(width: size, height: size, alignment: .center)
+            }
+            
+            Spacer()
+            
+            Image(settings.soundEffects ? "menu_on" : "menu_off")
+              .resizable()
+              .frame(width: size + 20, height: size, alignment: .center)
+              .padding(.horizontal, 20)
+            
+            Spacer()
+            
+            Button(action: {
+              settings.soundEffects.toggle()
+            }) {
+              Image("menu_forward")
+                .resizable()
+                .frame(width: size, height: size, alignment: .center)
+            }
+          }
+          .frame(width: 200)
         }
-        
-        Image("settings_music")
-          .resizable()
-          .frame(width: 350, height: 50, alignment: .center)
-        
-        HStack {
-          Image("menu_backward")
-            .resizable()
-            .frame(width: 40, height: 40, alignment: .leading)
-          
-          Image("menu_on")
-            .resizable()
-            .frame(width: 60, height: 60, alignment: .center)
-          
-          Image("menu_forward")
-            .resizable()
-            .frame(width: 40, height: 40, alignment: .leading)
-          
-        }
-      })
-      
+      }
+      .offset(x: 0, y: -50)
+
+      Spacer()
     }
-    .padding()
+    .padding(.vertical, 50)
+    .padding(.horizontal, 20)
   }
 }
 

@@ -8,7 +8,7 @@
 import Foundation
 
 class Settings: ObservableObject {
-  static let shared = Settings(numberOfQuestions: 3, soundEffects: true, backgroundMusic: true)
+  static let shared = Settings(numberOfQuestions: QuestionAmounts.five, soundEffects: true, backgroundMusic: false)
   
   enum QuestionAmounts: Int, CaseIterable {
     case five = 5
@@ -20,11 +20,11 @@ class Settings: ObservableObject {
   
   let allOfTheCases = QuestionAmounts.allCases
   
-  @Published var numberOfQuestions: Int
+  @Published var numberOfQuestions: QuestionAmounts
   @Published var soundEffects: Bool
   @Published var backgroundMusic: Bool
   
-  init(numberOfQuestions: Int, soundEffects: Bool, backgroundMusic: Bool) {
+  init(numberOfQuestions: QuestionAmounts, soundEffects: Bool, backgroundMusic: Bool) {
     self.numberOfQuestions = numberOfQuestions
     self.soundEffects = soundEffects
     self.backgroundMusic = backgroundMusic

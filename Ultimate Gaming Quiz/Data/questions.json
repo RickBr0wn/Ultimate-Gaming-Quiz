@@ -37,7 +37,7 @@
   },
   {
     "id": 7,
-    "question": "The Lylat system is the orimary sett8ing for which video game series?",
+    "question": "The Lylat system is the primary setting for which video game series?",
     "answers" : [ "Ratchet & Clank", "StarFox", "StarCraft", "Dead Space"],
     "correct_answer": "StarFox"
   },
@@ -59,3 +59,4 @@
     "correct_answer": "Doom"
   },
 ]
+  

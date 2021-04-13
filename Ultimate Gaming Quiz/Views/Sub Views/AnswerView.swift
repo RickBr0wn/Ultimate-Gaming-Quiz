@@ -9,16 +9,16 @@ import SwiftUI
 
 struct AnswerView: View {
   let answer: String
-  let fontName = Constants.primaryFont.rawValue
+  let font = Constants.primaryFont.rawValue
   
   var body: some View {
     ZStack {
       RoundedRectangle(cornerRadius: 25.0)
-        .fill(Color.white.opacity(0.4))
+        .fill(Color.white)
         .frame(width: 300, height: 70, alignment: .center)
       
       Text(answer)
-        .font(.custom(fontName, size: 28))
+        .font(.custom(font, size: 30))
     }
     .shadow(radius: 10)
   }

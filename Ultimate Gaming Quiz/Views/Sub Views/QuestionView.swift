@@ -13,14 +13,15 @@ struct QuestionView: View {
   
   var body: some View {
       ZStack {
-        Color.backgroundColor.opacity(0.4)
+        Color.backgroundColor
         
         Text(question)
-          .font(.custom(fontName, size: 26))
+          .font(.custom(fontName, size: 34))
           .multilineTextAlignment(.center)
           .foregroundColor(.mainDarkColor)
+          .padding()
       }
-      .frame(width: 350, height: 250, alignment: .center)
+      .frame(width: 350, height: 300, alignment: .center)
       .cornerRadius(25)
   }
 }
