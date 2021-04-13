@@ -22,29 +22,34 @@ struct GameModel {
     allOfTheQuestions = Bundle.main.decode("questions").shuffled()
   }
   
-  mutating func incrementTheScore() {
+  mutating func incrementTheScore() -> Void {
     self.score += 1
   }
   
-  mutating func incrementTheQuestionIndex() {
+  mutating func incrementTheQuestionIndex() -> Void {
     self.currentQuestionIndex += 1
   }
   
-  mutating func resetScore() {
+  mutating func resetTheScore() -> Void {
     self.score = 0
   }
   
-  mutating func resetTheQuestionIndex() {
+  mutating func resetTheQuestionIndex() -> Void {
     self.currentQuestionIndex = 0
   }
   
-  mutating func startGame() -> Void {}
+  mutating func startGame() -> Void {
+    self.allOfTheQuestions.shuffle()
+    self.resetTheScore()
+    self.resetTheQuestionIndex()
+    self.isGameOver = false
+  }
   
-  mutating func gameOver() {
+  mutating func gameOver() -> Void {
     self.isGameOver = true
   }
   
-  mutating func playerGuesses(answer: String, numberOfQuestions: Int) {
+  mutating func playerGuesses(answer: String, numberOfQuestions: Int) -> Void {
     if answer == self.allOfTheQuestions[self.currentQuestionIndex].correctAnswer {
       self.incrementTheScore()
     } else {

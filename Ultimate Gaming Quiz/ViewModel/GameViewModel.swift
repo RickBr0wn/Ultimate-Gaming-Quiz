@@ -8,6 +8,8 @@
 import SwiftUI
 
 class GameViewModel: ObservableObject {
+  static let shared = GameViewModel()
+  
   @Published var gameModel = GameModel()
   
   var numberOfQuestions = Settings.shared.numberOfQuestions
@@ -35,11 +37,17 @@ class GameViewModel: ObservableObject {
   var isGameOver: Bool {
     gameModel.isGameOver
   }
-  
+
   func playerGuesses(answer: String) -> Void {
     gameModel.playerGuesses(answer: answer, numberOfQuestions: numberOfQuestions)
   }
   
+  func gameOver() -> Void {
+    gameModel.gameOver()
+  }
   
+  func startGame() -> Void{
+    gameModel.startGame()
+  }
   
 }

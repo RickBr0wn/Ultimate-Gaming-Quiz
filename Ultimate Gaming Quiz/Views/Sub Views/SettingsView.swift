@@ -9,6 +9,7 @@ import SwiftUI
 
 struct SettingsView: View {
   @EnvironmentObject var gameStateVM: GameState
+  @ObservedObject var settings = Settings.shared
   
   var body: some View {
     VStack {
@@ -31,12 +32,14 @@ struct SettingsView: View {
             .frame(width: 40, height: 40, alignment: .leading)
         }
       }
-      .offset(x: 0, y: -74)
+//      .offset(x: 0, y: -74)
+      
+      Spacer()
       
       Image("settings_image")
         .resizable()
         .aspectRatio(contentMode: .fit)
-        .offset(x: 0, y: -20)
+//        .offset(x: 0, y: -20)
       
       VStack(alignment: .center, spacing: 10, content: {
         Image("settings_question")
@@ -44,17 +47,31 @@ struct SettingsView: View {
           .frame(width: 350, height: 50, alignment: .center)
         
         HStack {
-          Image("menu_backward")
-            .resizable()
-            .frame(width: 40, height: 40, alignment: .leading)
+          Button(action: {
+            self.settings.soundEffects.toggle()
+          }, label: {
+            Image("menu_backward")
+              .resizable()
+              .frame(width: 40, height: 40, alignment: .leading)
+          })
           
-          Image("menu_on")
-            .resizable()
-            .frame(width: 60, height: 60, alignment: .center)
+          if self.settings.soundEffects {
+            Image("menu_on")
+              .resizable()
+              .frame(width: 60, height: 60, alignment: .center)
+          } else {
+            Image("menu_off")
+              .resizable()
+              .frame(width: 60, height: 60, alignment: .center)
+          }
           
-          Image("menu_forward")
-            .resizable()
-            .frame(width: 40, height: 40, alignment: .leading)
+          Button(action: {
+            self.settings.soundEffects.toggle()
+          }, label: {
+            Image("menu_forward")
+              .resizable()
+              .frame(width: 40, height: 40, alignment: .leading)
+          })
           
         }
         

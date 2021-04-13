@@ -8,9 +8,18 @@
 import SwiftUI
 
 struct GameOverView: View {
+  @ObservedObject var gameVM = GameViewModel.shared
+  @EnvironmentObject var gameStateVM: GameState
+  
   var body: some View {
-    VStack {
-      Text("GAME OVER VIEW")
+    print(gameVM.score)
+    return VStack {
+      Text("Well done! You scored: \(gameVM.score)")
+      
+      Button("return to titles") {
+        gameVM.gameOver()
+        gameStateVM.currentGameState = .title
+      }
     }
   }
 }

@@ -11,6 +11,7 @@ struct HeaderView: View {
   let score: Int
   let questionNumber: Int
   let fontName = Constants.fontName.rawValue
+  let numberOfQuestions = Settings.shared.numberOfQuestions
   
   var body: some View {
     ZStack {
@@ -19,7 +20,7 @@ struct HeaderView: View {
           
         Spacer()
         
-        Text("\(questionNumber)/15")
+        Text("\(questionNumber)/\(numberOfQuestions)")
       }
       .padding()
       .font(.custom(fontName, size: 22))
@@ -34,7 +35,7 @@ struct HeaderView: View {
         .fill(Color.backgroundColor.opacity(0.9))
         .frame(width: 50, height: 50, alignment: .center)
       
-      Text("15")
+      Text("\(numberOfQuestions)")
         .font(.custom(fontName, size: 26))
         .fontWeight(.bold)
         .foregroundColor(.mainDarkColor)

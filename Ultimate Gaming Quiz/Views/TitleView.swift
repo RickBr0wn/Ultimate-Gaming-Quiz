@@ -9,6 +9,7 @@ import SwiftUI
 
 struct TitleView: View {
   @EnvironmentObject var gameStateVM: GameState
+  @ObservedObject var gameVM = GameViewModel.shared
   
   var body: some View {
       VStack {
@@ -39,6 +40,7 @@ struct TitleView: View {
           .offset(x: 0, y: -20)
         
         Button(action: {
+          gameVM.startGame()
           gameStateVM.currentGameState = .game
         }) {
           Image("title_button")

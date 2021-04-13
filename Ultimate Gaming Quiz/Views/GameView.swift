@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct GameView: View {
-  @ObservedObject var gameVM = GameViewModel()
+  @ObservedObject var gameVM = GameViewModel.shared
   
   @EnvironmentObject var gameStateVM: GameState
   
